@@ -1,0 +1,17 @@
+server:
+  port: 80
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/vrms?characterEncoding=utf8&useSSL=false
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis: # 配置sql语句配置文件的位置
+  mapper-locations: mapper/*.xml
+logging: # 配置开发时需要在控制台中打印的sql语言，这样便于调错
+  level:
+    com:
+      vrms:
+        app:
+          dao: debug

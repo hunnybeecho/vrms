@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vrms.app.dao.AddressDao">
+    <update id="save">
+        insert into address(address, detail, tel, ctime)
+        values (#{address}, #{detail}, #{tel}, #{ctime})
+    </update>
+    <update id="update">
+        update address
+        set address=#{address},
+            detail=#{detail},
+            tel=#{tel},
+            mtime=#{mtime}
+        where addid = #{addid}
+    </update>
+    <update id="remove">
+        update address
+        set deleted=1
+        where addid = #{addid}
+    </update>
+
+    <select id="listPage" resultType="com.vrms.app.entity.Address">
+        select * from address
+        <where>
+            <if test="address!=null and address!=''">
+                address like '%${address}%'
+            </if>
+            and deleted = 0
+        </where>
+        limit #{page},#{size}
+    </select>
+    <select id="count" resultType="java.lang.Integer">
+        select count(*) from address
+        <where>
+            <if test="address!=null and address!=''">
+                address like '%${address}%'
+            </if>
+            and deleted=0
+        </where>
+    </select>
+    <select id="list" resultType="com.vrms.app.entity.Address">
+        select *
+        from address
+        where deleted = 0;
+    </select>
+</mapper>

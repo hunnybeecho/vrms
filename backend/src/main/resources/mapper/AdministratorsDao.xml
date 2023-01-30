@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vrms.app.dao.AdministratorsDao">
+    <insert id="save">
+        insert into administrators(username, password, images, ctime)
+        values (#{username}, #{password}, #{images}, #{ctime})
+    </insert>
+    <update id="update">
+        update administrators
+        set username=#{username},
+            password=#{password},
+            images=#{images},
+            mtime=#{mtime}
+        where aid = #{aid}
+    </update>
+    <update id="remove">
+        update administrators
+        set deleted=1
+        where aid = #{aid}
+    </update>
+    <update id="changeStats">
+        update administrators
+        set stats=#{stats}
+        where aid = #{aid}
+    </update>
+
+    <select id="listPage" resultType="com.vrms.app.entity.Administrators">
+        select * from administrators
+        <where>
+            <if test="username!=null and username!=''">
+                username like '%${username}%'
+            </if>
+            and deleted=0
+        </where>
+        limit #{page},#{size}
+    </select>
+    <select id="count" resultType="java.lang.Integer">
+        select count(*) from administrators
+        <where>
+            <if test="username!=null and username!=''">
+                username like '%${username}%'
+            </if>
+            and deleted=0
+        </where>
+    </select>
+    <select id="login" resultType="com.vrms.app.entity.Administrators">
+        select *
+        from administrators
+        where username = #{username}
+          and deleted = 0
+          and stats = 0;
+    </select>
+</mapper>

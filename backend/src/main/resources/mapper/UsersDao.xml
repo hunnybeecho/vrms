@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vrms.app.dao.UsersDao">
+    <update id="save">
+        insert into users (username, password, idcard, tel, address, sex, age, ctime)
+        values (#{username}, #{password}, #{idcard}, #{tel}, #{address}, #{sex}, #{age}, #{ctime})
+    </update>
+    <update id="update">
+        update users
+        set username=#{username},
+            password=#{password},
+            idcard=#{idcard},
+            tel=#{tel},
+            address=#{address},
+            sex=#{sex},
+            age=#{age},
+            mtime=#{mtime}
+        where uid = #{uid}
+    </update>
+    <update id="remove">
+        update users
+        set deleted=1
+        where uid = #{uid}
+    </update>
+    <update id="changeStats">
+        update users
+        set stats=#{stats}
+        where uid = #{uid}
+    </update>
+
+    <select id="listPage" resultType="com.vrms.app.entity.Users">
+        select * from users
+        <where>
+            <if test="username!=null and username!=''">
+                username like '%${username}%'
+            </if>
+            and deleted=0
+        </where>
+        limit #{page},#{size}
+    </select>
+    <select id="count" resultType="java.lang.Integer">
+        select count(*) from users
+        <where>
+            <if test="username!=null and username!=''">
+                username like '%${username}%'
+            </if>
+            and deleted=0
+        </where>
+    </select>
+    <select id="list" resultType="com.vrms.app.entity.Users">
+        select *
+        from users
+        where deleted = 0;
+    </select>
+</mapper>

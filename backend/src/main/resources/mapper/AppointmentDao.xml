@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vrms.app.dao.AppointmentDao">
+    <insert id="save">
+        insert into appointment(uid, addid, avcid, money, apptime, ctime, mtime, remark)
+        values (#{uid}, #{addid}, #{avcid}, #{money}, #{apptime}, #{ctime}, #{mtime}, #{remark})
+    </insert>
+
+    <update id="changeStats">
+        update appointment
+        set uid=#{uid},
+            addid=#{addid},
+            avcid=#{avcid},
+            money=#{money},
+            apptime=#{apptime},
+            stats=#{stats},
+            ctime=#{ctime},
+            mtime=#{mtime},
+            remark=#{remark}
+        where appid = #{appid}
+    </update>
+
+    <select id="listPage" resultType="com.vrms.app.entity.Appointment">
+        select u.username, a.address, v.avcname, app.money, app.appstats, app.apptime, app.stats, app.ctime, app.mtime,
+        app.deleted, app.remark
+        from appointment app
+        left join users u on app.uid = u.uid
+        left join address a on app.addid = a.addid
+        left join vaccines v on app.avcid = v.avcid
+        <where>
+            <if test="username!=null and username!=''">
+                u.username like '%${username}%'
+            </if>
+            and app.deleted = 0
+        </where>
+        limit #{page}, #{size}
+    </select>
+
+    <select id="count" resultType="java.lang.Integer">
+        select count(*)
+        from appointment app
+        left join users u on app.uid = u.uid
+        left join address a on app.addid = a.addid
+        left join vaccines v on app.avcid = v.avcid
+        <where>
+            <if test="username!=null and username!=''">
+                u.username like '%${username}%'
+            </if>
+            and app.deleted = 0
+        </where>
+    </select>
+</mapper>

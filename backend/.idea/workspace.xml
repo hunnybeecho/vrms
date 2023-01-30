@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e6ca7eca-4165-4fe2-b644-00f721682a17" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:\Projects\Java\maven\apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\Projects\Java\maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="#JAVA_HOME" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="#JAVA_HOME" />
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectId" id="22qwshTmcfYeiU8ynI9HXyWy06i" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/vrms/app/utils" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\Java\IdeaProjects\vrms\src\main\java\com\vrms\app\utils" />
+      <recent name="D:\Projects\Java\IdeaProjects\vrms\src\main\java\com\vrms\app\aop" />
+      <recent name="D:\Projects\Java\IdeaProjects\vrms\src\main\java\com\vrms\app\tools" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.VrmsApp">
+    <configuration name="VrmsApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vrms.app.VrmsApp" />
+      <module name="vrms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vrms.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VrmsApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="vrms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.vrms.app.VrmsApp" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.VrmsApp" />
+      <item itemvalue="Spring Boot.VrmsApp" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.VrmsApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6ca7eca-4165-4fe2-b644-00f721682a17" name="Default Changelist" comment="" />
+      <created>1640578633611</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640578633611</updated>
+      <workItem from="1640578634798" duration="1260000" />
+      <workItem from="1640579934571" duration="10179000" />
+      <workItem from="1640590759335" duration="7034000" />
+      <workItem from="1640601328487" duration="373000" />
+      <workItem from="1640602082399" duration="522000" />
+      <workItem from="1640602625618" duration="1220000" />
+      <workItem from="1640604285283" duration="295000" />
+      <workItem from="1640604599338" duration="651000" />
+      <workItem from="1640605344581" duration="49000" />
+      <workItem from="1640653738195" duration="12659000" />
+      <workItem from="1640673343288" duration="15141000" />
+      <workItem from="1640759598306" duration="1213000" />
+      <workItem from="1641172141100" duration="4575000" />
+      <workItem from="1641208287227" duration="1812000" />
+      <workItem from="1641258494150" duration="24718000" />
+      <workItem from="1641449103584" duration="19268000" />
+      <workItem from="1641517598921" duration="1559000" />
+      <workItem from="1641636367297" duration="13438000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

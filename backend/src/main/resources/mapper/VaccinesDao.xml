@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vrms.app.dao.VaccinesDao">
+    <insert id="save">
+        insert into vaccines(avcname, manufactor, mdate, price, instructions, ctime, mtime)
+        values (#{avcname}, #{manufactor}, #{mdate}, #{price}, #{instructions}, #{ctime}, #{mtime})
+    </insert>
+    <update id="update">
+        update vaccines
+        set avcname=#{avcname},
+            manufactor=#{manufactor},
+            mdate=#{mdate},
+            price=#{price},
+            instructions=#{instructions},
+            ctime=#{ctime},
+            mtime=#{mtime}
+        where avcid = #{avcid}
+    </update>
+    <update id="remove">
+        update vaccines
+        set deleted = 1
+        where avcid = #{avcid}
+    </update>
+
+    <select id="listPage" resultType="com.vrms.app.entity.Vaccines">
+        select * from vaccines
+        <where>
+            <if test="avcname!=null and avcname!=''">
+                avcname like '%${avcname}%'
+            </if>
+            and deleted=0
+        </where>
+        limit #{page}, #{size}
+    </select>
+    <select id="count" resultType="java.lang.Integer">
+        select count(*) from vaccines
+        <where>
+            <if test="avcname!=null and avcname!=''">
+                avcname like '%${avcname}%'
+            </if>
+            and deleted=0
+        </where>
+    </select>
+    <select id="list" resultType="com.vrms.app.entity.Vaccines">
+        select *
+        from vaccines
+        where deleted = 0;
+    </select>
+</mapper>
