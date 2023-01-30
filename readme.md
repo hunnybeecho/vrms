@@ -1,0 +1,12 @@
+# vrms
+> 疫苗预约信息管理系统
+# 技术栈
+* 前端
+  * Vue2
+  * ElementUI
+  * Axios
+* 后端
+  * SpringBoot
+  * Shiro
+  * MyBatis
+  * Swagger
